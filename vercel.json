@@ -1,7 +1,7 @@
 {
   "version": 2,
   "regions": [
-    "us-east-2"
+    "cle1"
   ],
   "rewrites": [
     {
