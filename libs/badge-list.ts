@@ -1,7 +1,7 @@
 import path from 'path'
 import staticBadges from '../pages/api/static'
 
-const rel = (...args) => path.resolve(__dirname, ...args)
+const rel = (...args) => 'file://' + path.resolve(__dirname, ...args)
 
 // sort live badge manually
 export const liveBadgeList = [
@@ -49,7 +49,7 @@ export const liveBadgeList = [
 
 export async function loadBadgeMeta() {
   const liveBadgeExamples = await Promise.all(liveBadgeList.map(async id => {
-    const mod = await import(rel('../pages/api', id))
+    const mod = await import(rel('../pages/api', id + '.ts'))
     const { title, examples, handlers } = mod.default.meta
 
     return {

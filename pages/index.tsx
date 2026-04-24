@@ -4,6 +4,7 @@ import Bar from '../components/builder-bar'
 import Hints from '../components/builder-hints'
 import Helper from '../components/builder-helper'
 import Footer from '../components/footer'
+import 'dotenv/config'
 
 export default class BuilderPage extends React.Component {
   state = {
