@@ -44,10 +44,5 @@
       "memory": 128,
       "maxDuration": 32
     }
-  },
-  "env": {
-    "GH_TOKENS": "@badgen-gh-tokens",
-    "SENTRY_DSN": "@badgen-sentry-dsn",
-    "GA_MEASUREMENT_ID": "@badgen-tracking-ga"
   }
 }
