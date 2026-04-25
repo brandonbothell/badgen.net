@@ -47,7 +47,7 @@ async function handler ({ topic, teamId, projectId, branchId }: PathArgs) {
 
   switch (topic) {
     case 'grade': {
-      const grade = result?.grade.toLowerCase()
+      const grade = result?.grade?.toLowerCase()
       return {
         subject: 'deepscan',
         status: grade || 'unknown',
@@ -73,7 +73,7 @@ async function handler ({ topic, teamId, projectId, branchId }: PathArgs) {
         color: 'grey'
       }
       if (isObject(result) && hasProp(result, 'loc')) {
-        params.status = millify(result.loc)
+        params.status = millify(Number(result.loc))
         params.color = 'blue'
       }
       return params

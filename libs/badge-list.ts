@@ -5,46 +5,7 @@ const rel = (...args) => 'file://' + path.resolve(__dirname, ...args)
 
 // sort live badge manually
 export const liveBadgeList = [
-  // // source control
-  // 'github',
-  // 'gitlab',
-  // release registries
-  'homebrew',
-  'nuget',
-  'packagist',
-  'melpa',
-  'maven',
-  'cocoapods',
-  'haxelib',
-  'opam',
-  'cpan',
-  'cran',
-  'ctan',
-  'dub',
-  'elm-package',
-  'scoop',
-  'f-droid',
-  'shards',
-  'wapm',
-  'snapcraft',
-  // CI
-  'appveyor',
-  'codacy',
-  'azure-pipelines',
-  // quality & metrics
-  'snyk',
   'deepscan',
-  'uptime-robot',
-  'badgesize',
-  // social
-  'devrant',
-  'reddit',
-  // utilities
-  'opencollective',
-  'keybase',
-  'mastodon',
-  'tidelift',
-  'jenkins',
 ]
 
 export async function loadBadgeMeta() {
